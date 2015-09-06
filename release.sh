@@ -5,13 +5,9 @@ if [ "$(git branch | grep \* | egrep -o '\w+')" != "master" ]; then
   exit 1
 fi
 
-git diff --quiet HEAD
-if [ "$?" -eq 1 ]; then
-  echo "Please start from a clean state. Git found some changes (and it never lies)."
-  exit 1
-fi
 
-VERSION_NAME=""
+
+VERSION_NAME="webpacked"
 OLD_VERSION=`grep version package.json | tr -d ' ' | egrep -o '(\d+\.?)+'`
 
 increment() {
