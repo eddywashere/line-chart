@@ -1,2 +1,6 @@
-  }
-])
+    }
+  ])
+) window, window.angular
+
+if typeof module != 'undefined' and typeof exports != 'undefined' and module.exports == exports
+  module.exports = 'n3-line-chart'

@@ -43,5 +43,6 @@
   "scripts": {
     "postinstall": "bower install",
     "test": "grunt"
-  }
+  },
+  "main": "build/line-chart.js"
 }
